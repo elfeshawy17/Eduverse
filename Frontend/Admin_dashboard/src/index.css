@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 210 79% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 144 50% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 72% 57%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#F5F7FA] text-[#333333] font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-[#333333];
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-lg;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 animate-fade-in;
+  }
+
+  .form-group {
+    @apply mb-4;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-[#333333] mb-1;
+  }
+
+  .form-input {
+    @apply w-full p-2 border border-[#E5E9F0] rounded-md focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  .form-error {
+    @apply text-sm text-destructive mt-1;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover hover:scale-105;
+  }
+
+  .btn-success {
+    @apply bg-secondary text-white hover:bg-secondary-hover hover:scale-105;
+  }
+}
